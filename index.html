@@ -52,7 +52,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand author" href="#">John Doe</a>
+            <a class="navbar-brand author" href=".\index.html">John Doe</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -89,32 +89,35 @@
     </section>
 
     <!-- Picture Section -->
-   <section class="container-fluid mt-5">
+    <section class="container-fluid mt-5">
         <div class="container" style="max-width: 80%;">
             <h2 class="text-center mb-5">Gallery</h2>
             <div class="row">
                 <!-- Picture 1 (Randomly Selected) -->
                 <div class="col-md-6 mb-4">
-                    <img id="randomImage" class="img-fluid" alt="Random Image 1" style="width: 100%; height: 300px; object-fit: cover;">
+                    <img id="randomImage1" class="img-fluid" alt="Random Image 1" style="width: 100%; height: 300px; object-fit: cover;">
                 </div>
-                <!-- Picture 2 -->
+                <!-- Picture 2 (Randomly Selected) -->
                 <div class="col-md-6 mb-4">
-                    <img src="unnamed2.jpg" class="img-fluid" alt="Description of Image 2" style="width: 100%; height: 300px; object-fit: cover;">
+                    <img id="randomImage2" class="img-fluid" alt="Random Image 2" style="width: 100%; height: 300px; object-fit: cover;">
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- JavaScript to Randomly Select Image -->
+    <!-- JavaScript to Randomly Select Images -->
     <script>
-        // List of image file names
-        const images = ["unnamed1.jpg", "unnamed2.jpg"];
-        
-        // Select a random image from the list
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-        
-        // Set the src attribute of the first image
-        document.getElementById("randomImage").src = randomImage;
+        // List of image file names for Picture 1 and Picture 2
+        const images1 = ["unnamed1.jpg", "unnamed2.jpg"];
+        const images2 = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
+    
+        // Select random images from the lists
+        const randomImage1 = images1[Math.floor(Math.random() * images1.length)];
+        const randomImage2 = images2[Math.floor(Math.random() * images2.length)];
+    
+        // Set the src attributes of the images
+        document.getElementById("randomImage1").src = randomImage1;
+        document.getElementById("randomImage2").src = randomImage2;
     </script>
 
 
