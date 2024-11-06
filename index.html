@@ -3,17 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John's Page</title>
+    <title>John's Webpage</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- LaTeX CSS -->
     <link rel="stylesheet" href="https://latex.vercel.app/style.css">
 </head>
 <body>
 
-    <p class="author">John Doe</p>
+    <div class="container mt-5">
+        <!-- Header Section using Bootstrap and LaTeX styling -->
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p class="author">John Doe</p>
+            </div>
+        </div>
+        
+        <!-- Description Section using Bootstrap grid and LaTeX.css for styling -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="abstract">
+                    <h2>About Me</h2>
+                    <p>
+                        I am a passionate individual with interests in various fields, always keen to learn and explore new ideas.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    <div class="abstract">
-        <h2>About Me</h2>
-        <p>I am a passionate individual with interests in various fields, always keen to learn and explore new ideas.</p>
+        <!-- Additional Section Example -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">My Work</h3>
+                        <p class="card-text">I have worked on projects across multiple domains, including web development, data analysis, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
