@@ -26,6 +26,16 @@
             font-size: 1rem;
             line-height: 1.5;
         }
+                /* Remove any list-style or numbering in the navbar */
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar-nav li::before {
+            content: none; /* Remove any custom content added by LaTeX.css */
+        }
     </style>
 </head>
 <body>
