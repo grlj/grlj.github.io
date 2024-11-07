@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jernej Grlj</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- LaTeX CSS -->
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+
+    <style>
+        .container {
+            max-width: 100%;
+        }
+        
+        /* Media query for screens larger than 576px */
+        @media (min-width: 576px) {
+            .container {
+                max-width: 80%;
+            }
+        }
+        /* Remove outline and highlight effects for navbar links */
+        .nav-link {
+            outline: none; /* Remove outline on focus */
+            box-shadow: none; /* Remove any box shadow effect */
+            text-decoration: none; /* Remove underline if it appears */
+        }
+
+        .nav-link:focus, .nav-link:active {
+            outline: none; /* Remove the blue outline */
+            box-shadow: none; /* Remove any box shadow effect */
+        }
+        .navbar-brand {
+            outline: none;
+            box-shadow: none;
+        }
+        
+        /* Optional: Prevent link text from being highlighted */
+        .nav-link:focus, .nav-link:active {
+            background-color: transparent; /* No background change on focus */
+            color: inherit; /* Maintain original text color */
+        }
+        /* Adjust font size and line height */
+        body {
+            max-width: 128ch;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+                /* Remove any list-style or numbering in the navbar */
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar-nav li::before {
+            content: none; /* Remove any custom content added by LaTeX.css */
+        }
+        /* Optional: If specific classes are defined, increase their font size too */
+        body {
+            font-size: calc(1rem + 2pt); /* Increase base font size */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand author" href="./index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./research.html">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./poetry.html">Poezija</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./misc.html">Misc</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- About Section -->
+<section class="container-fluid mt-5">
+    <div class="container">
+        <h2 class="mb-4">In preparation</h2>
+        <ul class="list-unstyled">
+        <li class="ml-4">
+            <strong>SL(4) foams with seams</strong> <br>
+            <i>Joint with</i> <span>Mikhail Khovanov, Haihan Wu and Melissa Zhang</span> <br>
+        </li>
+    </ul>
+    </div>
+
+</section>
+
+
+    <!-- Footer Section -->
+    <footer class="container-fluid text-center py-4 mt-5">
+        <div class="container">
+            <p>11. 2024 | grlj (at) usc.edu</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
