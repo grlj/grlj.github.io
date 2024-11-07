@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="https://latex.vercel.app/style.css">
 
     <style>
+        .container {
+            max-width: 100%;
+        }
+        
+        /* Media query for screens larger than 576px */
+        @media (min-width: 576px) {
+            .container {
+                max-width: 80%;
+            }
+        }
         /* Remove outline and highlight effects for navbar links */
         .nav-link {
             outline: none; /* Remove outline on focus */
@@ -76,14 +86,14 @@
 
     <!-- Header Section -->
     <header class="container-fluid text-center py-5">
-        <div class="container" style="max-width: 80%;">
+        <div class="container">
             <h1 class="display-4 author">John Doe</h1>
         </div>
     </header>
 
     <!-- About Section -->
     <section class="container-fluid mt-5">
-        <div class="container" style="max-width: 80%;">
+        <div class="container">
             <div class="abstract text-center mb-4">
                 <p class="centered">I am a passionate individual with interests in various fields, always keen to learn and explore new ideas. I specialize in creating elegant and functional websites, with a strong emphasis on usability and design.</p>
             </div>
@@ -92,7 +102,7 @@
 
     <!-- Picture Section -->
     <section class="container-fluid mt-5">
-        <div class="container" style="max-width: 70%;">
+        <div class="container">
             <div class="row">
                 <!-- Picture 1 (Randomly Selected) -->
                 <div class="col-md-6 mb-4">
@@ -124,7 +134,7 @@
 
     <!-- Footer Section -->
     <footer class="container-fluid text-center py-4 mt-5">
-        <div class="container" style="max-width: 80%;">
+        <div class="container">
             <p>&copy; 2023 John Doe | <a href="#">Contact</a></p>
         </div>
     </footer>
