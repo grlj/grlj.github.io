@@ -61,6 +61,25 @@
         body {
             font-size: calc(1rem + 2pt); /* Increase base font size */
         }
+          label.sidenote-toggle:not(.sidenote-number) {
+            display: inline;
+          }
+          .sidenote {
+            display: none;
+          }
+          .sidenote-toggle:checked + .sidenote {
+            display: block;
+            margin: 0.5rem 1.25rem 1rem 0.5rem;
+            float: left;
+            left: 1rem;
+            clear: both;
+            width: 95%;
+          }
+          /* tweak indentation of sidenote inside a blockquote */
+          blockquote .sidenote {
+            margin-right: -25vw;
+            width: 16vw;
+          }
     </style>
 </head>
 <body>
