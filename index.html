@@ -10,6 +10,23 @@
     <link rel="stylesheet" href="https://latex.vercel.app/style.css">
 
     <style>
+        /* Remove outline and highlight effects for navbar links */
+        .nav-link {
+            outline: none; /* Remove outline on focus */
+            box-shadow: none; /* Remove any box shadow effect */
+            text-decoration: none; /* Remove underline if it appears */
+        }
+        
+        .navbar-brand {
+            outline: none;
+            box-shadow: none;
+        }
+        
+        /* Optional: Prevent link text from being highlighted */
+        .nav-link:focus, .nav-link:active {
+            background-color: transparent; /* No background change on focus */
+            color: inherit; /* Maintain original text color */
+        }
         /* Adjust font size and line height */
         body {
             max-width: 128ch;
