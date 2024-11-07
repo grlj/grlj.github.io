@@ -60,34 +60,27 @@
         /* Optional: If specific classes are defined, increase their font size too */
         body {
             font-size: calc(1rem + 2pt); /* Increase base font size */
-        }/* Use the dark mode styles from LaTeX.css for the navbar */
-        body.latex-dark .navbar {
-            background-color: var(--latex-dark-background); /* Use the dark background from LaTeX.css */
-            color: var(--latex-light-text); /* Use the light text color from LaTeX.css */
         }
-
-        body.latex-dark .navbar .nav-link {
-            color: var(--latex-light-text); /* Light text color for nav links */
-        }
-
-        body.latex-dark .navbar .nav-link:hover {
-            color: var(--latex-highlight-text); /* Use a highlight color for hover effect */
-        }
-
-        body.latex-dark .navbar-brand {
-            color: var(--latex-light-text); /* Light text color for the brand */
-        }
-            a {
-        text-decoration: none; /* Remove underline */
-        border: none; /* Remove any border */
-    }
-
-    /* Ensure the links don't show an outline or border when focused or active */
-    a:focus, a:active {
-        outline: none; /* Remove outline */
-        border: none; /* Remove border */
-    }
-        </style>
+          label.sidenote-toggle:not(.sidenote-number) {
+            display: inline;
+          }
+          .sidenote {
+            display: none;
+          }
+          .sidenote-toggle:checked + .sidenote {
+            display: block;
+            margin: 0.5rem 1.25rem 1rem 0.5rem;
+            float: left;
+            left: 1rem;
+            clear: both;
+            width: 95%;
+          }
+          /* tweak indentation of sidenote inside a blockquote */
+          blockquote .sidenote {
+            margin-right: -25vw;
+            width: 16vw;
+          }
+    </style>
 </head>
 <body>
 
@@ -131,13 +124,6 @@
 
 </section>
 
-
-    <!-- Footer Section -->
-    <footer class="container-fluid text-center">
-        <div class="container">
-            <p>11. 2024 | grlj (at) usc.edu</p>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
