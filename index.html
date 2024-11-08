@@ -117,12 +117,33 @@
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="container-fluid text-center">
-        <div class="container">
-            <h1 class="display-4 author" margin-top="1rem" margin-bottom="1rem">Jernej Grlj</h1>
-        </div>
-    </header>
+<!-- Header Section -->
+<header class="container-fluid text-center">
+    <div class="container">
+        <h1 class="display-4 author" style="margin-top:1rem; margin-bottom:1rem;">Jernej Grlj<sup style="font-size: 1.2rem; cursor: pointer;" onclick="playRandomAudio()">&#128266;</sup></h1>
+    </div>
+</header>
+
+<!-- JavaScript to handle audio playback -->
+<script>
+    function playRandomAudio() {
+        // List of audio files in the folder 'jernej'
+        const audioFiles = [
+            'jernej/jernej.m4a',
+            'jernej/blaž.m4a'
+            // Add more file paths as needed
+        ];
+
+        // Pick a random file
+        const randomIndex = Math.floor(Math.random() * audioFiles.length);
+        const randomAudio = audioFiles[randomIndex];
+
+        // Create an audio object and play
+        const audio = new Audio(randomAudio);
+        audio.play();
+    }
+</script>
+
 
     <!-- About Section -->
     <section class="container-fluid">
@@ -156,8 +177,8 @@
     <!-- JavaScript to Randomly Select Images -->
     <script>
         // List of image file names for Picture 1 and Picture 2
-        const images1 = ["unnamed1.jpg", "unnamed2.jpg"];
-        const images2 = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
+        const images1 = ["mojaslika/unnamed1.jpg", "mojaslika/unnamed2.jpg"];
+        const images2 = ["slike/photo1.jpg", "slike/photo2.jpg", "slike/photo3.jpg"];
     
         // Select random images from the lists
         const randomImage1 = images1[Math.floor(Math.random() * images1.length)];
