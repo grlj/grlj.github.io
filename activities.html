@@ -8,15 +8,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <!-- LaTeX CSS -->
         <link rel="stylesheet" href="css/style.css">
-    
+
         <style>
             h1 {
-                
+
             }
             .container {
                 max-width: 100%;
             }
-            
+
             /* Media query for screens larger than 576px */
             @media (min-width: 576px) {
                 .container {
@@ -29,7 +29,7 @@
                 box-shadow: none; /* Remove any box shadow effect */
                 text-decoration: none; /* Remove underline if it appears */
             }
-    
+
             .nav-link:focus, .nav-link:active {
                 outline: none; /* Remove the blue outline */
                 box-shadow: none; /* Remove any box shadow effect */
@@ -38,7 +38,7 @@
                 outline: none;
                 box-shadow: none;
             }
-            
+
             /* Optional: Prevent link text from being highlighted */
             .nav-link:focus, .nav-link:active {
                 background-color: transparent; /* No background change on focus */
@@ -56,7 +56,7 @@
                 padding: 0;
                 margin: 0;
             }
-    
+
             .navbar-nav li::before {
                 content: none; /* Remove any custom content added by LaTeX.css */
             }
@@ -68,15 +68,15 @@
                 background-color: var(--latex-dark-background); /* Use the dark background from LaTeX.css */
                 color: var(--latex-light-text); /* Use the light text color from LaTeX.css */
             }
-    
+
             body.latex-dark .navbar .nav-link {
                 color: var(--latex-light-text); /* Light text color for nav links */
             }
-    
+
             body.latex-dark .navbar .nav-link:hover {
                 color: var(--latex-highlight-text); /* Use a highlight color for hover effect */
             }
-    
+
             body.latex-dark .navbar-brand {
                 color: var(--latex-light-text); /* Light text color for the brand */
             }
@@ -84,7 +84,7 @@
             text-decoration: none; /* Remove underline */
             border: none; /* Remove any border */
         }
-    
+
         /* Ensure the links don't show an outline or border when focused or active */
         a:focus, a:active {
             outline: none; /* Remove outline */
@@ -98,7 +98,7 @@
           }
           .sidenote-toggle:checked + .sidenote {
             display: block;
-            margin: 0.5rem 1.25rem 0 0.5rem;
+            margin: 0.5rem 1.25rem 1rem 0.5rem;
             float: left;
             left: 1rem;
             clear: both;
@@ -141,46 +141,69 @@
     <!-- About Section -->
 <section class="container-fluid mt-5">
     <div class="container">
-        <h2 class="mb-4">In preparation</h2>
+        <h2 class="mb-4">Talks and Presentations</h2>
         <ul class="list-unstyled">
         <li class="ml-4">
-            <strong>6-valent vertex in the GL(N) web category and its categorification</strong> 
-            <label for="sn-1" class="sidenote-toggle sidenote-number"></label>
-            <input type="checkbox" id="sn-1" class="sidenote-toggle" checked  />
-            <span class="sidenote">Using Robert and Wagner's GL(N) foam evaluation to N = 4 and N = 5, we decompose the benzen web in the Karoubi envelope of the Web category using categorification. 
-                A similar decomposition is conjectured for larger N and we outline the first steps towards the construction of a nice web basis in higher ranks.</span> <br>
-            &nbsp;&nbsp;<i>Joint with</i> <span> <a href="https://sites.google.com/view/mkhovanov/"> Mikhail Khovanov</a>, <a href="https://sites.google.com/ucdavis.edu/haihanwu"> Haihan Wu</a>,  and  <a href="https://www.melissa-zhang.com/">Melissa Zhang</a></span> <br>
+            <strong><a href="https://c-negron.github.io/new_structures26">New Structures in Low-Dimensional Topology Workshop 2026</a></strong>, AIM, 6. 2026 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<i>Spectral geometry of Khovanov Laplacians (Lightning talk)</i>
         </li>
         <li class="ml-4">
-            <strong>Spectral geometry of Khovanov Laplacians</strong> 
-            <label for="sn-2" class="sidenote-toggle sidenote-number"></label>
-            <input type="checkbox" id="sn-2" class="sidenote-toggle" checked  />
-            <span class="sidenote">Intorducing an inner product on rational Khovanov chain complexes leads to the notion of Khovanov Laplacians. The zero eigenvalues correspond to homology.
-                Higher eigenvalues hold mroe geometric information. We study the spectral gaps of some knot diagrams, Reidemeister torsion, and recover the Lee spectral sequence. 
-            </span> <br>
-            &nbsp;&nbsp;<i>Joint with</i> <span>  <a href="https://sites.google.com/view/lauda-home/home"> Aaron Lauda</a></span> <br>
+            <strong><a href="https://www.fmf.uni-lj.si/en/research/topology-seminar/">Topology Seminar</a></strong>, University of Ljubljana, 2. 2026 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<i>Torsion invariants and harmonic Khovanov homology</i>
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://icerm.brown.edu/program/semester_program_workshop/sp-f25-w2">Diagrammatic Categorification</a></strong>, ICERM, 10. 2025 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<i>Action of the Witt algebra on categorified quantum groups (Lightning talk)</i>
+        </li>
+        <li class="ml-4">
+            <strong>Student topology seminar</strong>, USC, 9. 2025 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<i>Exotic R4 via Khovanov homology</i>
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://cbz20.raspberryip.com/CategorificationLDT-2025/">Categorification in Low Dimensional Topology</a></strong>, University of Bochum, 7. 2025 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<i>SL(4) Foam Evaluation (Lightning talk)</i>
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://www.simonsfoundation.org/event/simons-collaboration-on-new-structures-in-low-dimensional-topology-annual-meeting-2025/">Simons Collaboration New Structures in low-dimensional topology</a></strong>, New York, 3. 2025 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<i>SL(4) Foam Evaluation and Six-Valent Seams (Poster)</i>
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://www.fmf.uni-lj.si/en/research/topology-seminar/">Topology Seminar</a></strong>, University of Ljubljana, 3. 2019 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<i>PL Morse Theory</i>
         </li>
     </ul>
-    <h2 class="mb-4">Publications</h2>
+        <h2 class="mb-4">Conferences Attended</h2>
         <ul class="list-unstyled">
         <li class="ml-4">
-            <strong>Analytic Torsion and Spectral Gap Capture Persistent-Laplacian Performance </strong>
-            <label for="sn-3" class="sidenote-toggle sidenote-number"></label>
-            <input type="checkbox" id="sn-3" class="sidenote-toggle" unchecked  />
-            <span class="sidenote"> Persistent Laplacians offer a richer representation of data than persistent homology, utilizing them for learning tasks is often hampered by high dimensionality and the "varying length" of feature vectors.
-                We propose a compact spectral representation that distills the persistent Laplacian into three mathematically grounded invariants: Betti numbers, the spectral gap, and analytic torsion. </span> <br>
-            &nbsp;&nbsp;(<a href="https://arxiv.org/abs/2606.16990">arXiv:2606.16990</a>)  <br>
-            &nbsp;&nbsp;<i>Joint with</i> <span> <a href="https://sites.google.com/view/lauda-home/home"> Aaron Lauda</a></span> <br>
+            <strong><a href="https://www.ipam.ucla.edu/programs/long-programs/quantum-topology-character-varieties-and-low-dimensional-geometry/">Quantum Topology, Character Varieties, and Low-Dimensional Geometry</a></strong>, IPAM, Fall 2026 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<i>IPAM Long Program participant</i>
         </li>
         <li class="ml-4">
-            <strong>Action of the Witt algebra on categorified quantum groups</strong>
-            <label for="sn-4" class="sidenote-toggle sidenote-number"></label> 
-            <input type="checkbox" id="sn-4" class="sidenote-toggle" unchecked  />
-            <span class="sidenote"> We construct an action of the positive Witt algebra on the categorified simply-laced quantum groups. 
-                This action recovers the action of Qi, Robert, Sussan, and Wagner on foams. This action is compatible with the trace decategorification. </span> <br>
-            &nbsp;&nbsp;(<a href="https://arxiv.org/abs/2507.01877">arXiv:2507.01877</a>),
-            <i>Quantum Topology</i> (<a href="https://ems.press/journals/qt/articles/14299600">DOI:10.4171/QT/251</a>)<br>
-            &nbsp;&nbsp;<i>Joint with</i> <span> <a href="https://sites.google.com/view/lauda-home/home"> Aaron Lauda</a></span> <br>
+            <strong><a href="https://sites.google.com/view/qtmeetsqc-2026/home">Quantum Topology Meets Quantum Computation</a></strong>, Monte Verità, Ascona, 4. 2026
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://www.simonsfoundation.org/event/simons-collaboration-on-new-structures-in-low-dimensional-topology-annual-meeting-2026/">Simons Collaboration on New Structures in Low-Dimensional Topology Annual Meeting</a></strong>, New York, 3. 2026
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://icerm.brown.edu/program/topical_workshop/tw-25-wagtc">Webs in Algebra, Geometry, Topology and Combinatorics</a></strong>, ICERM, 12. 2025
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://indico.ictp.it/event/10839">Conference on Modern Developments in Low-Dimensional Topology</a></strong>, ICTP, Trieste, 6. 2025
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://indico.ictp.it/event/10839">Summer School on Modern Tools in Low-Dimensional Topology</a></strong>, ICTP, Trieste, 6. 2025
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://sites.google.com/view/diagrammatic-learning/home">Diagrammatic Intuition and Deep Learning in Mathematics</a></strong>, University of York, 7. 2024
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://sites.google.com/view/york-lms-research-school-2024/home">LMS Research School 2024 - Combinatorial representation theory and diagrammatic categorification</a></strong>, University of York, 7. 2024
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://erdoscenter.renyi.hu/events/summer-school-new-structures-low-dimensional-topology">Summer school - New structures in low-dimensional topology</a></strong>, Rényi Institute, Budapest, 7. 2024
+        </li>
+        <li class="ml-4">
+            <strong><a href="https://www.simonsfoundation.org/event/simons-collaboration-on-new-structures-in-low-dimensional-topology-annual-meeting-2024/">Simons Collaboration on New Structures in Low-Dimensional Topology Annual Meeting</a></strong>, New York, 3. 2024
         </li>
     </ul>
     </div>
@@ -190,4 +213,8 @@
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
