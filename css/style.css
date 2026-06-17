@@ -783,3 +783,43 @@ h5,
 h6 {
   margin-bottom: 0.8rem;
 }
+
+/* Dark-mode navbar overrides (beat Bootstrap's .bg-light !important / navbar-light) */
+.latex-dark .navbar,
+.latex-dark .navbar.bg-light {
+  background-color: var(--body-bg-color) !important;
+}
+
+.latex-dark .navbar .nav-link,
+.latex-dark .navbar .navbar-brand,
+.latex-dark .navbar-brand {
+  color: var(--body-color) !important;
+}
+
+.latex-dark .navbar .nav-link:hover {
+  color: var(--link-visited) !important;
+}
+
+/* Dark-mode toggle button in the navbar */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--body-color);
+  color: var(--body-color);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.1rem 0.55rem;
+  margin-left: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: opacity 0.15s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.65;
+}
+
+.theme-toggle:focus,
+.theme-toggle:active {
+  outline: none;
+  box-shadow: none;
+}

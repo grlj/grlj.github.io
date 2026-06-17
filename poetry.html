@@ -3,6 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Apply saved/system color scheme before render to avoid flash -->
+    <script>
+      (function () {
+        function readTheme() {
+          try { var s = localStorage.getItem('theme'); if (s) return s; } catch (e) {}
+          var m = document.cookie.match(/(?:^|;\s*)theme=(dark|light)/);
+          return m ? m[1] : null;
+        }
+        var stored = readTheme();
+        var dark = stored
+          ? stored === 'dark'
+          : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('latex-dark');
+      })();
+    </script>
         <title>Jernej Grlj</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -64,21 +79,21 @@
             body {
                 font-size: calc(1rem + 2pt); /* Increase base font size */
             }/* Use the dark mode styles from LaTeX.css for the navbar */
-            body.latex-dark .navbar {
-                background-color: var(--latex-dark-background); /* Use the dark background from LaTeX.css */
-                color: var(--latex-light-text); /* Use the light text color from LaTeX.css */
+            .latex-dark .navbar {
+                background-color: var(--body-bg-color); /* Use the dark background from LaTeX.css */
+                color: var(--body-color); /* Use the light text color from LaTeX.css */
             }
     
-            body.latex-dark .navbar .nav-link {
-                color: var(--latex-light-text); /* Light text color for nav links */
+            .latex-dark .navbar .nav-link {
+                color: var(--body-color); /* Light text color for nav links */
             }
     
-            body.latex-dark .navbar .nav-link:hover {
-                color: var(--latex-highlight-text); /* Use a highlight color for hover effect */
+            .latex-dark .navbar .nav-link:hover {
+                color: var(--link-visited); /* Use a highlight color for hover effect */
             }
     
-            body.latex-dark .navbar-brand {
-                color: var(--latex-light-text); /* Light text color for the brand */
+            .latex-dark .navbar-brand {
+                color: var(--body-color); /* Light text color for the brand */
             }
                 a {
             text-decoration: none; /* Remove underline */
@@ -98,6 +113,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand author" href="./index.html">Home</a>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" onclick="toggleTheme()">🌙</button>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -178,4 +194,49 @@
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dis
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Dark-mode toggle logic -->
+    <script>
+      function saveTheme(val) {
+        try { localStorage.setItem('theme', val); } catch (e) {}
+        document.cookie = 'theme=' + val + '; path=/; max-age=31536000; SameSite=Lax';
+      }
+      function readThemePref() {
+        try { var s = localStorage.getItem('theme'); if (s) return s; } catch (e) {}
+        var m = document.cookie.match(/(?:^|;\s*)theme=(dark|light)/);
+        return m ? m[1] : null;
+      }
+      function toggleTheme() {
+        var isDark = document.documentElement.classList.toggle('latex-dark');
+        saveTheme(isDark ? 'dark' : 'light');
+        updateThemeIcon(isDark);
+      }
+      function updateThemeIcon(isDark) {
+        var btn = document.getElementById('themeToggle');
+        if (btn) {
+          btn.textContent = isDark ? '\u2600\uFE0F' : '\u{1F319}';
+          btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        }
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        updateThemeIcon(document.documentElement.classList.contains('latex-dark'));
+        if (window.matchMedia) {
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+            if (readThemePref()) return;
+            document.documentElement.classList.toggle('latex-dark', e.matches);
+            updateThemeIcon(e.matches);
+          });
+        }
+        // Sync the theme across any other open tabs/subpages live
+        window.addEventListener('storage', function (e) {
+          if (e.key !== 'theme') return;
+          var dark = e.newValue === 'dark';
+          document.documentElement.classList.toggle('latex-dark', dark);
+          updateThemeIcon(dark);
+        });
+      });
+    </script>
+</body>
+</html>
