@@ -124,6 +124,12 @@
             margin-right: -25vw;
             width: 16vw;
           }
+          .research-papers {
+            counter-reset: sidenote-counter 8;
+          }
+          .research-papers .sidenote-number {
+            counter-increment: sidenote-counter -1;
+          }
             </style>
     </head>
 <body>
@@ -156,9 +162,16 @@
     </nav>
     <!-- About Section -->
 <section class="container-fluid mt-5">
-    <div class="container">
+    <div class="container research-papers">
         <h2 class="mb-4">In preparation</h2>
         <ul class="list-unstyled">
+        <li class="ml-4">
+            <strong>One clean qubit and the analytic torsion of quantum flat bundles</strong> 
+            <label for="sn-7" class="sidenote-toggle sidenote-number"></label>
+            <input type="checkbox" id="sn-7" class="sidenote-toggle" checked  />
+            <span class="sidenote">Show that estimating the torsion of a family of flat bundles on closed hyperbolic 3-manifolds is DQC1 complete.</span> <br>
+            &nbsp;&nbsp;<i>Joint with</i> <span><a href="https://sites.google.com/view/filippoiulianelli">Filippo Iulianelli</a>,  <a href="https://sites.google.com/view/lauda-home/home"> Aaron Lauda</a>, and <a href="https://www.mit.edu/~alexsc/"> Alexander Schmidhuber</a></span> <br>
+        </li>
         <li class="ml-4">
             <strong>Categorification of Kekule relations</strong> 
             <label for="sn-6" class="sidenote-toggle sidenote-number"></label>
